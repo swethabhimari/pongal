@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pongal Celebration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8e1;
+      text-align: center;
+    }
+
+    header {
+      background-color: blue;
+      color: white;
+      padding: 20px;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .container {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      background: #ffecb3;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-section {
+      margin-bottom: 20px;
+    }
+
+    .input-section input {
+      padding: 10px;
+      font-size: 1em;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .input-section button {
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      background-color: #ff9800;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .input-section button:hover {
+      background-color: #e65100;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .gift {
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .gift img {
+      width: 150px;
+      height: auto;
+    }
+
+    .celebration-message {
+      font-size: 2em;
+      color: black;
+      margin-top: 30px;
+    }
+
+    .pongal-image {
+      margin-top: 20px;
+      width: 300px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Happy Pongal!
+  </header>
+
+  <div class="container">
+    <div class="gift" id="gift" onclick="revealGift()">
+      <img src="https://5.imimg.com/data5/KA/QG/MY-69672094/gift-box.jpg" alt="Gift"><br>
+      <p>click</p>
+    </div>
+    
+    
+
+    <div id="content" style="display: none;">
+      <div class="celebration-message">🎉 Happy Makara Sankranthi! 🎉</div>
+      <img class="pongal-image" src="https://media4.giphy.com/media/rYJ4CXdCR9u9X7yvuA/giphy.webp?cid=ecf05e47fwa4vj5rtdweicvs83df6l72ha2hyyiob93c71uc&ep=v1_gifs_search&rid=giphy.webp&ct=g" alt="Pongal Celebration">
+    </div>
+
+    <!-- <div class="input-section">
+      <input id="imageUrl" type="text" placeholder="Enter image URL here...">
+       <button onclick="addImage()">Add Image</button> -->
+    <!-- </div>
+    <div class="image-gallery" id="imageGallery"> --> 
+      <!-- Images will appear here dynamically -->
+    </div>
+  </div>
+
+  <script>
+    // function addImage() {
+    //   const imageUrl = document.getElementById('imageUrl').value;
+    //   if (imageUrl) {
+    //     const gallery = document.getElementById('imageGallery');
+    //     const imgElement = document.createElement('img');
+    //     imgElement.src = imageUrl;
+    //     imgElement.alt = 'Pongal Image';
+    //     gallery.appendChild(imgElement);
+    //     document.getElementById('imageUrl').value = ''; // Clear input field
+    //   } else {
+    //     alert('Please enter a valid image URL!');
+    //   }
+    // }
+
+    function revealGift() {
+      const gift = document.getElementById('gift');
+      const content = document.getElementById('content');
+      gift.style.display = 'none';
+      content.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
